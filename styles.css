@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 .container {
@@ -48,6 +49,10 @@ header h1 {
     float: left;
 }
 
+header a:hover {
+    color: #77BFA3;
+}
+
 #home {
     padding: 50px 0;
     text-align: center;
@@ -64,10 +69,12 @@ section {
 }
 
 section img {
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
     display: block;
     margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #about p {
@@ -84,6 +91,7 @@ section img {
     color: #fff;
     margin: 5px 0;
     padding: 10px;
+    border-radius: 5px;
 }
 
 #contact a {
@@ -100,4 +108,13 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 2s ease-in;
 }
